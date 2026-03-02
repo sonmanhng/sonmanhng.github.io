@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With My Love — Nguyen Son</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="icon" type="image/x-icon" href="../../icon.ico">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            aspect-ratio: 4/5;
+            background: #f5f5f5;
+            opacity: 1;
+            /* Ensure visible */
+            transform: none;
+            /* Reset transform */
+            transition: all 0.6s ease-out;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .post-header {
+            margin-bottom: 2rem;
+        }
+
+        .post-meta {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <nav>
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-brand">Nguyen Son</a>
+            <div class="nav-links" id="navLinks">
+                <a href="../../index.html">Home</a>
+                <a href="../../publications.html">Publications</a>
+                <a href="../../teaching.html">Teaching</a>
+                <a href="../../talks.html">Talks</a>
+                <a href="../../projects.html">Projects</a>
+                <a href="../../blog.html">Blog</a>
+                <a href="../../files/resume_sonnguyen.pdf" class="nav-cv" target="_blank">CV ↗</a>
+            </div>
+            <button class="mobile-menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar reveal">
+            <img src="../../img/avt2.jpg" alt="Nguyen Son" class="profile-img">
+            <div>
+                <p class="sidebar-name">Nguyen Son</p>
+                <div class="sidebar-meta">
+                    <p><strong>University of Science</strong></p>
+                    <p>Vietnam National University</p>
+                    <p>Undergraduate · GTA</p>
+                    <p>Hanoi, Vietnam</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <article class="reveal reveal-active">
+                <header class="post-header">
+                    <h1>With My Love</h1>
+                    <div class="accent-line"></div>
+                    <p class="post-meta">MARCH 2, 2026 &bull; GALLERY</p>
+                </header>
+
+                <p>Khoảnh khắc với em, công chúa bé iu của anh — A collection of special moments and memories.</p>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal reveal-active"><img src="../../img/withmylove/IMG_9919.JPG"
+                            alt="With My Love"></div>
+                    <div class="gallery-item reveal reveal-active"><img src="../../img/withmylove/IMG_9923.JPG"
+                            alt="With My Love"></div>
+                    <div class="gallery-item reveal reveal-active"><img src="../../img/withmylove/IMG_9936.JPG"
+                            alt="With My Love"></div>
+                    <div class="gallery-item reveal reveal-active"><img src="../../img/withmylove/IMG_9938.JPG"
+                            alt="With My Love"></div>
+                    <div class="gallery-item reveal reveal-active"><img src="../../img/withmylove/IMG_9942.JPG"
+                            alt="With My Love"></div>
+                    <div class="gallery-item reveal reveal-active"><img src="../../img/withmylove/IMG_9951.JPG"
+                            alt="With My Love"></div>
+                    <div class="gallery-item reveal reveal-active"><img src="../../img/withmylove/IMG_9997.JPG"
+                            alt="With My Love"></div>
+                </div>
+
+                <div style="margin-top: 4rem;">
+                    <a href="../../blog.html" class="pub-link">← Back to Blog</a>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../../scripts.js"></script>
+</body>
+
+</html>
